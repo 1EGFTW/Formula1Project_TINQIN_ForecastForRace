@@ -27,7 +27,7 @@ public class ForecastProcessorCore implements ForecastProcess {
             final Forecast forecast=weatherClientService.getForecastByLatAndLon(input.getLat(),input.getLon());
             return LocationResponse.builder()
                     .temperature(String.valueOf(forecast.getCurrent().getTemp_c())+ " Celsius")
-                    .humidity(String.valueOf(forecast.getCurrent().getHumidity())+ "%")
+                    .humidity(String.valueOf(forecast.getCurrent().getHumidity())+ " %")
                     .condition(forecast.getCurrent().getCondition().getText())
                     .build();
 
