@@ -7,6 +7,8 @@ import lombok.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
+@ToString
 public class LocationRequest implements OperationInput {
     private Double lat;
     private Double lon;
